@@ -1,0 +1,139 @@
+/* Reset some default styles */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  border-radius: 8px;
+}
+.conttennav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+
+/* Style for the navbar */
+.navbar {
+  position: fixed;
+  z-index: 999;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  margin: 30px 20%;
+  border-radius: 20px;
+  box-shadow: 0 0 .1rem #fff,
+  0 0 .1rem #fff,
+  0 0 .1rem #c7d7dc,
+  0 0 0.6rem #c7d7dc,
+  0 0 1.8rem #c7d7dc,
+  inset 0 0 1rem #c7d7dc; 
+  animation: pulsate 1.5s infinite alternate;  
+  background-color: black;
+
+}
+
+
+.navbar-logo:hover {
+  color: #6c8c95;
+}
+.navbar-menu.show {
+  transform: scaleY(1);
+  transform: translateY(60px);
+}
+.navbar-menu-item {
+  transition: transform 0.2s ease;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.navbar-item-link:hover {
+  color: #6c8c95;
+}
+/* Style for the navbar logo */
+.navbar-logo {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Style for the navbar menu */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+}
+
+/* Style for the navbar menu items */
+.navbar-menu-item {
+  margin-right: 15px;
+}
+
+/* Style for the navbar item links */
+.navbar-item-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Style for the navigation icon */
+.nav-icon {
+  cursor: pointer;
+  display: none;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    
+  }
+
+  .navbar-menu.show {
+    display: flex;
+  }
+
+  .navbar-menu-item {
+    margin: 0;
+    text-align: center;
+  }
+
+  .nav-icon {
+    display: block;
+  }
+}
+// @keyframes pulsate {
+    
+//   100% {
+
+//       text-shadow:
+//       0 0 4px #fff,
+//       0 0 11px #fff,
+//       0 0 19px #fff,
+//       0 0 40px #c7d7dc,
+//       0 0 80px #c7d7dc,
+//       0 0 90px #c7d7dc,
+//       0 0 100px #c7d7dc,
+//       0 0 150px #c7d7dc;
+  
+//   }
+  
+//   0% {
+
+//     text-shadow:
+//     0 0 2px #fff,
+//     0 0 4px #fff,
+//     0 0 6px #fff,
+//     0 0 10px #c7d7dc,
+//     0 0 45px #c7d7dc,
+//     0 0 55px #c7d7dc,
+//     0 0 70px #c7d7dc,
+//     0 0 80px #c7d7dc;
+
+// } }

@@ -1,0 +1,81 @@
+.over {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Hiển thị 3 cột trên mỗi hàng */
+    gap: 20px; /* Khoảng cách giữa các cột */
+    width: 70%;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin: 10px; /* Khoảng cách giữa các card */
+    animation: moveAndScale 1.5s ease-in-out; /* Áp dụng animation với thời gian 2 giây và hàm chuyển động ease-in-out */
+
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 10px;
+    color: #ddd;
+  }
+  
+  .card-name {
+    margin: 0;
+  }
+  
+  .card-proficiency {
+    margin: 5px 0 0;
+    color: #888;
+    font-size: 14px;
+  }
+  .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 .1rem #fff,
+  0 0 .1rem #fff,
+  0 0 .1rem #c7d7dc,
+  0 0 0.6rem #c7d7dc,
+  0 0 1.8rem #c7d7dc,
+  inset 0 0 1rem #c7d7dc; 
+}
+
+@keyframes moveAndScale {
+  0% {
+    transform: translateX(-300%) scale(0.2); /* Kích thước nhỏ và di chuyển ra khỏi màn hình bên trái */
+  }
+  80% {
+    transform: translateX(55%) scale(0.2);/* Di chuyển về vị trí giữa */
+  }
+
+  100% {
+    transform: translateX(0) scale(1); /* Kích thước to và vị trí cuối cùng */
+  }
+}
+
+
+@media (max-width: 600px) {
+  .container-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Hiển thị 3 cột trên mỗi hàng */
+    gap: 20px; /* Khoảng cách giữa các cột */
+    width: 70%;
+  }
+}

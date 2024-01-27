@@ -1,0 +1,100 @@
+
+.hi{
+  animation: moveright 1s ease-out  ;
+}
+.container {
+  color: white;
+  font-size: 2.26rem;
+  text-transform: uppercase;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulsatee 1.5s infinite alternate;
+  animation-delay: 1s;
+  
+}
+
+.anime{
+  margin-bottom: 150px;
+}
+
+.left{
+  margin: 0 15px;
+}
+
+.left p {
+  font-size: 100px;
+  animation:  moveUp 1s ease-out;
+}
+.right p{
+  font-size: 40px;
+  animation:  moveleft 1s ease-out;
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveleft {
+  from {
+    transform: translateX(780px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveright {
+  from {
+    transform: translateX(-660px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulsatee {
+  100% {
+    text-shadow: 
+    0 0 4px #000000,
+    0 0 11px #000000,
+    0 0 19px #000000,
+    0 0 30px #222222,
+    0 0 70px #555555,
+    0 0 80px #888888,
+    0 0 90px #aaaaaa,
+    0 0 130px #ffffff;
+  }
+
+  0% {
+    text-shadow: 
+    0 0 4px #000000,
+    0 0 11px #000000,
+    0 0 19px #000000,
+    0 0 30px #222222,
+    0 0 70px #555555,
+    0 0 80px #888888,
+    0 0 90px #aaaaaa,
+    0 0 130px #ffffff;
+  }
+}
+
+@media (max-width: 600px) {
+  .left p {
+    font-size: 70px;
+    animation:  moveUp 1s ease-out;
+  }
+  .right p{
+    font-size: 30px;
+    animation:  moveleft 1s ease-out;
+  }
+  .hi{
+    font-size: 30px;
+  }
+  }

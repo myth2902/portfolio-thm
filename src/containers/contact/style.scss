@@ -1,0 +1,52 @@
+.container-contact {
+    width: 70%;
+    overflow: hidden; /* Clear the float */
+    padding: 15px;
+  }
+  
+  .column-contact {
+    width: 30%; /* Set the width of each column */
+    float: left; /* Float the columns next to each other */
+    margin: 1%; /* Add some margin between columns */
+    box-sizing: border-box; /* Include padding and border in the width */    
+  }
+  .father{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+.card-contact img{
+    background-color: white;
+    width: 25%;
+    border-radius: 50%;
+    border: 4px black solid ;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.card-contact h2{
+    margin: 10px 0px;
+    color: white;
+}
+.card-contact p{
+    color: white;
+}
+.card-contact{
+    border-radius: 10px;
+    box-shadow: 0 0 .1rem #fff,
+    0 0 .1rem #fff,
+    0 0 .1rem #c7d7dc,
+    0 0 0.6rem #c7d7dc,
+    0 0 1.8rem #c7d7dc,
+    inset 0 0 1rem #c7d7dc; 
+}
+@media (max-width: 600px) {
+    .card-contact p{
+      display: none;
+    }
+    .card-contact h2{
+      font-size: 15px;
+    }
+  }
